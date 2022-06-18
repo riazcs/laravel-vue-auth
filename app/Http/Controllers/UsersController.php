@@ -39,13 +39,14 @@ class UsersController extends Controller
            'file' => 'required|mimes:jpg,jpeg,png,csv,txt,xlx,xls,pdf|max:2048'
         ]);
 
-        $fileUpload = auth()->user();
-
+        $fileUpload = User::first();
+        // $fileUpload = new user;
+        // dd($fileUpload);
         if($request->file()) {
             $file_name = time().'_'.$request->file->getClientOriginalName();
             $file_path = $request->file('file')->storeAs('uploads', $file_name, 'public');
 
-            $fileUpload->name = time().'_'.$request->file->getClientOriginalName();
+            // $fileUpload->ava = time().'_'.$request->file->getClientOriginalName();
             $fileUpload->path = '/storage/' . $file_path;
             $fileUpload->save();
 
