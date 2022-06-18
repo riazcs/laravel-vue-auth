@@ -40,8 +40,6 @@ class UsersController extends Controller
         ]);
 
         $fileUpload = User::first();
-        // $fileUpload = new user;
-        // dd($fileUpload);
         if($request->file()) {
             $file_name = time().'_'.$request->file->getClientOriginalName();
             $file_path = $request->file('file')->storeAs('uploads', $file_name, 'public');
