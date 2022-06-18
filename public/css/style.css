@@ -1,0 +1,161 @@
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+#banner{
+    background-image: linear-gradient(#ff5722, #ffc107);
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    font-family: sans-serif;
+    padding-top: 5%;
+    color: #fff;
+}
+
+h1{
+    color:#fff;
+
+}
+p{
+    color:#fff;
+}
+
+.square ul{
+    margin:0 !important;
+}
+
+ul li{
+    position: absolute;
+    border: 10px solid #fff;
+    width: 30px;
+    height: 30px;
+    list-style: none;
+    opacity: 0;
+    background: #fff;
+}
+
+.square li{
+    top:50vh;
+    left:10vh;
+    animation: square 10s linear infinite;
+}
+
+.square li:nth-child(2){
+    top:80vh;
+    left:10vh;
+    animation-delay: 2s;
+}
+
+.square li:nth-child(3){
+    top:80vh;
+    left:80vw;
+    animation-delay: 4s;
+}
+
+.square li:nth-child(4){
+    top:10vh;
+    left:85vw;
+    animation-delay: 6s;
+}
+
+.square li:nth-child(5){
+    top:10vh;
+    left:10vw;
+    animation-delay: 8s;
+}
+
+@keyframes square {
+    0%{
+        transform: scale(0) rotateY(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(5) rotateY(1000deg);
+        opacity: 0;
+
+    }
+}
+
+.circle ul{
+    margin: 0 !important;
+}
+
+.circle li{
+    bottom: 0;
+    left:15vw;
+    animation: circle 10s linear infinite;
+}
+
+.circle li:nth-child(2){
+    left:35vw;
+    animation-delay:2s;
+}
+
+.circle li:nth-child(3){
+    left:55vw;
+    animation-delay:6s;
+}
+
+.circle li:nth-child(4){
+    left:75vw;
+    animation-delay:4s;
+}
+
+.circle li:nth-child(5){
+    left:90vw;
+    animation-delay:8s;
+}
+
+@keyframes circle {
+    0%{
+        transform: scale(0) rotateY(0deg);
+        opacity: 1;
+        bottom: 0;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: scale(5) rotateY(1000deg);
+        opacity: 0;
+        bottom: 90vh;
+        border-radius: 50%;
+    }
+}
+
+
+.footer{
+    background-color: olive;
+    color: #fff;
+    padding: 20px 0px 20px 30px;
+    
+}
+
+.input-group-text{
+    background-image: linear-gradient(to right, #ff5722, #ffc107);
+}
+
+button{
+    margin-right: -1620px;
+    margin-top: -70px;
+    padding: 5px 0;
+}
+
+.form-row{
+    margin-left: 200px !important;
+}
+
+i{
+    padding: 9px 0;
+}
+
+.height-100vh{
+    height: 100vh;
+}
+
+.max-width-none{
+    max-width: none;
+}
+
